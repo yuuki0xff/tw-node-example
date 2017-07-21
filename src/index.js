@@ -107,7 +107,7 @@ Promise.resolve(0)
             .delay(1000)
             .then(function loop() {
                 // ·×Â¬
-                return bme280.measureAsync()
+                bme280.measureAsync()
                     .then(val => {
                         console.log('READ VALUES: %j', val);
                         bme280thing.setProperty('temperature', val.temperature);
